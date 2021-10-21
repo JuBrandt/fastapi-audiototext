@@ -1,0 +1,26 @@
+
+<link rel="stylesheet" href="{{ url_for('static', path='/css/style_.css') }}">
+
+    <div class="wrapper">
+        <div class="container_panel">
+            <div class="panel_list">
+                <div class="panel panel_instrumentov">
+                    <a href="{{ ('download') }}" class="panel_link">Панель инструментов</a>
+                </div>
+                <div class="panel profile"><a href="{{ ('profile') }}" class="panel_link">Профиль</a></div>
+                <div class="panel microfone"><a href="{{ ('voicetotext') }}" class="panel_link">Микрофон</a></div>
+                <div class="panel add_words"><a href="{{ ('add_words') }}" class="panel_link">Добавить слова</a></div>
+                <div class="panel get_audio"><a href="{{ ('videotoaudio') }}" class="panel_link">Забрать аудио</a></div>
+            </div>
+
+            <div class="form_download">
+                <div class="form_download_field">
+                    <div class="form_download_file">
+                        Скачать перевод
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

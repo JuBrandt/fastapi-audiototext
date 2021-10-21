@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервис перевода аудио и видео файлов в текст</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style_.css') }}">
+
+</head>
+<body>
+<div class="elipse_panel">
+        <div class="ellipse_up"></div>
+    </div>
+    <header class="header">
+        <div class="wrapper">
+
+            <div class="header_wrapper">
+                <div class="header_logo">
+                    <div class="header_logo_pic"><img class="header_logo_pics"
+                            src="{{ url_for('static', path='/img/dpiir_w21.png') }}" alt=""></div>
+                </div>
+                <nav class="header_nav">
+                    <ul class="header_menu_item">
+                        <li class="menu_item header_menu_item_main">
+                            <a href="{{ ('index') }}"
+                                class="header_link">Главная</a>
+                        </li>
+                        <li class="menu_item header_menu_item_audio_totext">
+                            <a href="{{ ('audiototext') }}"
+                                class="header_link">Аудио в текст</a>
+                        </li>
+                        <li class="menu_item header_menu_item_video_totext">
+                            <a href="{{ ('videototext') }}"
+                                class="header_link">Видео в текст</a>
+                        </li>
+                        <li class="menu_item header_menu_item_voice_totext">
+                            <a href="{{ ('voicetotext') }}"
+                                class="header_link">Голос в текст</a>
+                        </li>
+                        <li class="menu_item header_menu_item_goin">
+                            <a href="#popup_dark_window" class="header_link">Вход</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

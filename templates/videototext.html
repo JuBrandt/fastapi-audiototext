@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="{{ url_for('static', path='/css/style_.css') }}">
+{% include 'base_header.html' %}
+
+{% include 'base_body_temp.html' %}
+<div class="wrapper">
+        <div class="header_title_h">
+<h1 class="header_h1">{% block header_h1 %}Сервис перевода{% endblock header_h1 %}</h1>
+
+            <h2 class="header_h2">{% block header_h2 %}видео файлов{% endblock header_h2 %}</h2>
+            <h3 class="header_h3">{% block header_h3 %}в текст{% endblock header_h3 %}</h3>
+ </div>
+    </div>
+
+<div class="wrapper">
+        <div class="form_upload_colomn">
+            <div class="form_field_text_row">
+                <form action="/uploadfile_mp4" enctype="multipart/form-data" method="post" class="form_uploadfile">
+                    <div class="form_field_name_text">
+                        <input type="text" name="title" placeholder="Тема загрузки" class="field_form_theme_text">
+                    </div>
+                    <div class="form_field_description_text">
+                        <input type="text" name="description" placeholder="Кратко описать"
+                            class="field_form_descrip_textin">
+                    </div>
+            </div>
+
+            <div class="form_field_button_row">
+                <div class="form_field_upload">
+                    <input type="file" name="files" value="Загрузите файл" placeholder="Загрузите файл"
+                        class="field_form_uploadfile" multiple>
+                </div>
+                <div class="field_form_submit">
+                    <input type="submit" value="Отправить" class="field_form_submintfile">
+                </div>
+            </div>
+            <div class="form_feild_description_row">
+                <div class="down_text_form">{% block down_text_form %}Загрузите и отправьте видео файл в формате mp4. Размер файла до 2 Гб.{% endblock down_text_form %}</div>
+            </div>
+        </div>
+
+        </form>
+    </div>
+    </div>
+</div>
+
+{% include 'base_footer.html' %}

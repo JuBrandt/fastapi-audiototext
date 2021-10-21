@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервис перевода аудио и видео файлов в текст</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style_.css') }}">
+
+</head>
+
+
+<body>
+<div class="elipse_panel">
+        <div class="ellipse_up"></div>
+    </div>
+    <header class="header">
+        <div class="wrapper">
+
+            <div class="header_wrapper">
+                <div class="header_logo">
+                    <div class="header_logo_pic"><img class="header_logo_pics"
+                            src="{{ url_for('static', path='/img/dpiir_w21.png') }}" alt=""></div>
+                </div>
+                <nav class="header_nav">
+                    <ul class="header_menu_item">
+                        <li class="menu_item header_menu_item_main">
+                            <a href="{{ url_for('static', path='/templates/index_.html') }}"
+                                class="header_link">Главная</a>
+                        </li>
+                        <li class="menu_item header_menu_item_audio_totext">
+                            <a href="{{ url_for('static', path='/templates/audiototext.html') }}"
+                                class="header_link">Аудио в текст</a>
+                        </li>
+                        <li class="menu_item header_menu_item_video_totext">
+                            <a href="{{ url_for('static', path='/templates/videototext.html') }}"
+                                class="header_link">Видео в текст</a>
+                        </li>
+                        <li class="menu_item header_menu_item_voice_totext">
+                            <a href="{{ url_for('static', path='/templates/voicetotext.html') }}"
+                                class="header_link">Голос в текст</a>
+                        </li>
+                        <li class="menu_item header_menu_item_goin">
+                            <a href="#popup_dark_window" class="header_link">Вход</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="header_title_h">
+
+            <h1 class="header_h1">Сервис перевода</h1>
+            <h2 class="header_h2">аудио и видео файлов</h2>
+            <h3 class="header_h3">в текст</h3>
+
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="form_upload_colomn">
+            <div class="form_field_text_row">
+                <form action="/uploadfile_mp4" enctype="multipart/form-data" method="post" class="form_uploadfile">
+                    <div class="form_field_name_text">
+                        <input type="text" name="title" placeholder="Тема загрузки" class="field_form_theme_text">
+                    </div>
+                    <div class="form_field_description_text">
+                        <input type="text" name="description" placeholder="Кратко описать"
+                            class="field_form_descrip_textin">
+                    </div>
+            </div>
+
+            <div class="form_field_button_row">
+                <div class="form_field_upload">
+                    <input type="file" name="files" value="Загрузите файл" placeholder="Загрузите файл"
+                        class="field_form_uploadfile" multiple>
+                </div>
+                <div class="field_form_submit">
+                    <input type="submit" value="Отправить" class="field_form_submintfile">
+                </div>
+            </div>
+            <div class="form_feild_description_row">
+                <div class="down_text_form">Загрузите и отправьте аудио файл в формате mp3. Размер файла до 2 Гб.</div>
+            </div>
+        </div>
+
+        </form>
+    </div>
+    </div>
+    </div>
+    <div class="wrapper">
+        <div class="uslugi_service">
+            <div class="uslugi_service_title">Услуги и сервисы</div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="support_column">
+
+
+
+            <div class="item online_service">
+                <h2 class="item title support_online_service">Онлайн сервис ВТЕКСТ</h2>
+
+                <div class="item text online_webapp">
+                    Веб-приложение ВТЕКСТ будет полезно, если Вам нужно преобразовать аудио и
+                    видео файл в текст онлайн. Приложение не требует установки и работает из браузера.
+                </div>
+            </div>
+
+            <div class="item support_format">
+                <h2 class="item title support_format_title">Поддержка форматов</h2>
+                <div class="item suport_format_frame">
+                    <div class="item text support_format_app">
+                        Веб-приложение ВТЕКСТ распознает аудио файл в формате mp3, wav, видео в формате mp4.
+                        Если файл не обрабатывается сервисом, то скорее всего файл не того формата, поврежден,
+                        либо слишком большой. Размер файла должен быть до 2 Гб.
+                    </div>
+                </div>
+            </div>
+            <div class="item security_service">
+                <div class="item security_service_title">
+                    <h2 class="item title security_service_title">Безопасность</h2>
+                </div>
+                <div class="item security_service_frame">
+                    <div class="item text security_service_text">
+                        Доступ к вашим файлам есть только у вас.
+                        Файлы удаляются с серверов через несколько
+                        минут с момента окончания обработки файла.
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item empty_1"></div>
+            <div class="item empty_2"></div>
+            <div class="item simple_interface_frame">
+                <div class="item simple_interface_title">
+                    <h2 class="item title simple_interface_title">Простой интерфейс</h2>
+                </div>
+                <div class="item text simple_interface_text">
+                    После загрузки файла подождите немного,
+                    сразу начнется обработка файла. Никаких
+                    сложных функций: всё доступно
+                    в один-два нажатия мышкой.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<div class="eclipse_down"></div>
+
+<footer class="footer">
+
+    <div class="wrapper">
+        <div class="footer_item">
+            <div class="footer_logo">
+                <div class="footer_logo_pic"></div>
+            </div>
+            <div class="wrapper_down">
+                <div class="copyright_block">
+                    <h3 class="copyright">Дизайн Брандт Юлии</h3>
+                </div>
+            </div>
+            <div class="footer_nav">
+                <ul class="footer_menu">
+                    <li class="footer_menu_item">
+                        <a href="{{ url_for('static', path='/templates/index_.html') }}"
+                            class="footer_menu_main footer_menu_link">Главная</a>
+                    </li>
+                    <li class="footer_menu_item">
+                        <a href="{{ url_for('static', path='/templates/audiototext.html') }}"
+                            class="footer_menu_audio footer_menu_link">Аудио в текст</a>
+                    </li>
+                    <li class="footer_menu_item">
+                        <a href="{{ url_for('static', path='/templates/videototext.html') }}"
+                            class="footer_menu_video footer_menu_link">Видео в текст</a>
+                    </li>
+                    <li class="footer_menu_item">
+                        <a href="{{ url_for('static', path='/templates/voicetotext.html') }}"
+                            class="footer_menu_voice footer_menu_link">Голос в текст</a>
+                    </li>
+                    <li class="footer_menu_item">
+                        <a href="#popup_dark_window" class="footer_menu_exit footer_menu_link">Вход</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="downlogo"></div>
+<div id="popup_dark_window" class="popup_dark_window">
+    <a href="#header" class="popup_area"></a>
+    <div class="wrapper">
+
+        <div class="popupreg_popupactive">
+            <div class="registation">
+                <div class="title_registration">
+                    Регистрация
+                </div>
+                <div class="field_registration">
+                    <div class="field_reg_style email_reg">
+                        Email
+                    </div>
+                    <div class="field_reg_style name_reg">
+                        Имя
+                    </div>
+                    <div class="field_reg_style password_reg">
+                        Пароль
+                    </div>
+                    <div class="empty_reg"></div>
+                    <div class="field_button_reg_act button_registration">Регистрация</div>
+
+                </div>
+
+            </div>
+            <div class="active">
+                <div class="title_active">
+                    Авторизация
+                </div>
+                <div class="field_active">
+                    <div class="field_reg_style email_active">
+                        Email
+                    </div>
+                    <div class="field_reg_style passwors_active">
+                        Пароль
+                    </div>
+                    <div class="field_button_reg_act button_active">Авторизация</div>
+                </div>
+            </div>
+            <div class="popup_close_reg">
+                <a href="#header" class="popup_close">X</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</html>
